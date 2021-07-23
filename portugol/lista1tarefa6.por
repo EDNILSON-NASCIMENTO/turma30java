@@ -13,7 +13,6 @@ programa
 		real p1
 		real p2
 		
-
 		escreva("Digite o valor de x1 :")
 		leia(x1)
 		escreva("Digite o valor de x2 :")
@@ -42,7 +41,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 517; 
+ * @POSICAO-CURSOR = 147; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
