@@ -55,7 +55,6 @@ d) percentual de pessoas com salário até R$100,00.
 		escreva("\nMédia de filhos  : ",mediaFilhos)
 		escreva("\nMaior salario    : R$ ",maiorSalario)
 		escreva("\nPercentual até R$ 100.00 de salario : ",percentualSalario100)
-
 		
 	}
 }
@@ -64,7 +63,7 @@ d) percentual de pessoas com salário até R$100,00.
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1586; 
+ * @POSICAO-CURSOR = 975; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
