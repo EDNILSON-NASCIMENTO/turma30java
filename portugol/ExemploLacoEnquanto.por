@@ -27,7 +27,7 @@ programa
 				
 		} enquanto (senha !="123")
 	
-		escreva("Seguindo o programa....")	
+		escreva("Seguindo o programa e ajustando....")	
 		
 
 		
@@ -41,7 +41,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 149; 
+ * @POSICAO-CURSOR = 490; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
