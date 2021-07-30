@@ -16,8 +16,15 @@ programa
 		
 		para (inteiro l=0; l<LINHA; l++){
 			para(inteiro c=0; c<COLUNA; c++){
-				N1[l][c] = Util.sorteia(3, 5)
-				N2[l][c] = Util.sorteia(1, 4)
+				
+				escreva("Digite um valor para N1 :")
+				leia(N1[l][c])
+				//N1[l][c] = Util.sorteia(3, 5)
+				escreva("Digite um valor para N2 :")
+				leia(N2[l][c])
+				//N2[l][c] = Util.sorteia(1, 4)
+				
+				
 				M1[l][c] = N1[l][c] + N2[l][c]
 				M2[l][c] = N1[l][c] - N2[l][c]
 			}
@@ -57,7 +64,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 220; 
+ * @POSICAO-CURSOR = 994; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {N1, 9, 10, 2}-{N2, 10, 10, 2}-{M1, 11, 10, 2};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
