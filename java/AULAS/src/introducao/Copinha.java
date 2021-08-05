@@ -8,117 +8,66 @@ public class Copinha {
 		
 		Scanner leia = new Scanner(System.in);
 		
-		String time1="SANTOS", time2="SPFC", time3="PALMEIRAS", time4="CORINTHIANS";
-		int ponto1=0, ponto2=0, ponto3=0, ponto4=0;
 		
-		String times[] = new String[4];
-		int pontos[] = {0,0,0,0};
+		String codTime[] = new String[4];
+		String nomesTimes[] = {"SANTOS       ","SPFC        ","PALMEIRAS","CORINTHIANS"};
+		int pontosTimes[] = {0,0,0,0};
+		char op;
+		String auxCod;
 		
-		
-		char op='X'; //G GANHOU - 3, P - PERDEU - 0, E - EMPATOU - 1
-		
-		for (int x=1;x<=2;x++) {
+		//"CPF-01"
+		for (int x=0; x<codTime.length; x++) { 
 			
-			System.out.println("RODADA : "+x);
-			System.out.print(time1+" G-ganhou, P-perdeu ou E-empatou : ");
-			op = leia.next().toUpperCase().charAt(0);
-			if (op == 'G') {
-				ponto1 += 3;
-				//ponto1 = ponto1 + 3;
+			if (x==9) {
+				codTime[x] = "CPF-"+(x+1);
 			}
-			else if (op=='E') {
-				ponto1 += 1;
-			}
-			else if (op=='P') {
-				ponto1 += 0;
-			} 
 			else {
-				System.out.println("Digitou errado,  vai fica com 0 !!!");
+				codTime[x] = "CPF-0"+(x+1);
+				
 			}
-			System.out.print(time2+" G-ganhou, P-perdeu ou E-empatou : ");
-			op = leia.next().toUpperCase().charAt(0);
-			if (op == 'G') {
-				ponto2 += 3;
-				//ponto1 = ponto1 + 3;
-			}
-			else if (op=='E') {
-				ponto2 += 1;
-			}
-			else if (op=='P') {
-				ponto2 += 0;
-			} 
-			else {
-				System.out.println("Digitou errado,  vai fica com 0 !!!");
-			}
-			System.out.print(time3+" G-ganhou, P-perdeu ou E-empatou : ");
-			op = leia.next().toUpperCase().charAt(0);
-			if (op == 'G') {
-				ponto3 += 3;
-				//ponto1 = ponto1 + 3;
-			}
-			else if (op=='E') {
-				ponto3 += 1;
-			}
-			else if (op=='P') {
-				ponto3 += 0;
-			} 
-			else {
-				System.out.println("Digitou errado,  vai fica com 0 !!!");
-			}
-			System.out.print(time4+" G-ganhou, P-perdeu ou E-empatou : ");
-			op = leia.next().toUpperCase().charAt(0);
-			if (op == 'G') {
-				ponto4 += 3;
-				//ponto1 = ponto1 + 3;
-			}
-			else if (op=='E') {
-				ponto4 += 1;
-			}
-			else if (op=='P') {
-				ponto4 += 0;
-			} 
-			else {
-				System.out.println("Digitou errado,  vai fica com 0 !!!");
-			}
-
-
+		
+		}
+		System.out.println("INICIO DA TABELA");
+		System.out.println("COD\tTIME     \tPONTOS");
+		for(int x=0;x<codTime.length; x++) {
+			System.out.printf("%s\t%s\t%d\n",codTime[x],nomesTimes[x],pontosTimes[x]);
 		}
 		System.out.println();
-		System.out.println("TABELA");
-		System.out.printf("Time: %s pontos atuais : %d ponto(s)!!!\n", time1, ponto1);
-		System.out.printf("Time: %s pontos atuais : %d ponto(s)!!!\n", time2, ponto2);
-		System.out.printf("Time: %s pontos atuais : %d ponto(s)!!!\n", time3, ponto3);
-		System.out.printf("Time: %s pontos atuais : %d ponto(s)!!!\n", time4, ponto4);
-		
-		/*
-		 * para (inteiro x=1; x<=4; x++){
-		 * escreva(time1+" G-ganhou, P-perdeu ou E-empatou : ")
-		 * leia(op)
-			 * se (op=='G'){
-			 * 	ponto1=3
-			 * }
-			 * senao se (op=='E') {
-			 * ponto1=1
-			 * }
-			 * senao {
-			 * ponto1 = 0
-			 * }
-			 *
-			 * escreva(time2+" G-ganhou, P-perdeu ou E-empatou : ")
-			 * leia(op)
-			 * se (op=='G'){
-			 * 	ponto1=3
-			 * }
-			 * senao se (op=='E') {
-			 * ponto1=1
-			 * }
-			 * senao {
-			 * ponto1 = 0
-			 * }
+		//laço que roda o numero de rodadas que vc deseja
+		for (int x=1; x<=3; x++) {
+			System.out.println("Rodada "+x);
+			//laço que roda todos os times
+			for (int y=0; y<codTime.length; y++) {
+				System.out.print(nomesTimes[y]+" G-ganhou, P-perdeu ou E-empatou : ");
+				op = leia.next().toUpperCase().charAt(0);
+				if (op =='G') {
+					pontosTimes[y] = pontosTimes[y]+3;
+				}
+				else if (op =='E') {
+					pontosTimes[y] += 1; //pontosTimes[y] = pontosTimes[y]+1
+				} 
+				else if (op =='P') {
+					pontosTimes[y] += 0; //pontosTimes[y] = pontosTimes[y]+1
+				}
+				else {
+					System.out.println("Vc não escolheu um codigo correto, vai fica zero!");
+				}
 			}
-		 */
+		}
+		System.out.println("APÓS 3 RODADAS");
+		System.out.println("COD\tTIME     \tPONTOS");
+		for(int x=0;x<codTime.length; x++) {
+			System.out.printf("%s\t%s\t%d\n",codTime[x],nomesTimes[x],pontosTimes[x]);
+		}
+		System.out.println();
+		System.out.println("Digite o codigo do time que deseja selecionar :");
+		auxCod = leia.next().toUpperCase();
 		
-		
+		System.out.println("COD\tTIME     \tPONTOS");
+		for(int x=0;x<codTime.length; x++) {
+			if ( auxCod.equals(codTime[x])  ) {
+				System.out.printf("%s\t%s\t%d\n",codTime[x],nomesTimes[x],pontosTimes[x]);
+			}
+		}
 	}
-
 }
