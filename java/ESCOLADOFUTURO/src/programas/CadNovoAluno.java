@@ -13,6 +13,8 @@ public class CadNovoAluno {
 		Scanner leia = new Scanner(System.in);
 		Aluno exemplo1 = new Aluno(); //objeto do tipo aluno
 		
+		
+		
 		System.out.println("Digite  o nome do aluno :");
 		exemplo1.nome = leia.next();
 		System.out.println("Digite a matricula :");
