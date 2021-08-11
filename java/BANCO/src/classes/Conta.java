@@ -40,6 +40,7 @@ public abstract class Conta {
 	public void debito(double valor) {
 		if (valor < 0) {
 			System.out.println("Valor negativo, impossivel realizar!!!");
+			//throw new RuntimeException("Não é permitido informar valores negativos.");
 		}
 		else if (valor > saldo ) {
 			System.out.println("Impossivel realizar...");
