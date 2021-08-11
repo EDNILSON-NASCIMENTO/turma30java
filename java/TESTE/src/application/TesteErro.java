@@ -26,14 +26,14 @@ public class TesteErro {
 			
 			System.out.printf("O valor digitado na posição %d foi %d!!!\n",valor,valores[valor]);
 			System.out.println("valor da divisão teste :"+valores[valor]/valor);
-			System.exit(0);
+			
 		}
 		catch (Exception erro) {
 			System.out.println("Vc errou!!!");
 			
 			System.out.println(erro.getMessage());
 			erro.printStackTrace();
-			System.exit(0);
+			
 		}
 		finally {
 			System.out.println("Fechando o teclado!!!");

@@ -10,8 +10,16 @@ public class Funcionario {
 	public Funcionario(String matricula, int horasTrabalhadas, double valorHora) {
 		super();
 		this.matricula = matricula;
-		this.horasTrabalhadas = horasTrabalhadas;
-		this.valorHora = valorHora;
+		if (horasTrabalhadas < 0) {
+			this.horasTrabalhadas = 0;
+		} else {
+			this.horasTrabalhadas = horasTrabalhadas;
+		}
+		if (valorHora < 0) {
+			this.valorHora = 0;
+		} else {
+			this.valorHora = valorHora;
+		}
 	}
 	//encapsulamento - getter and setters
 	public String getMatricula() {
@@ -39,6 +47,7 @@ public class Funcionario {
 	}
 	//metodo
 	public double salario() {
+		
 		return valorHora*horasTrabalhadas;
 	}
 	
