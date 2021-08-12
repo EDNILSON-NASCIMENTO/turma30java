@@ -14,6 +14,11 @@ public class Produto {
 		this.nome = nome;
 		
 	}
+	
+	public Produto (String codigo, int estoque) {
+		this.codigo = codigo;
+		this.estoque = estoque;
+	}
 
 	public Produto(String codigo, String nome, double valor, int estoque) {
 		super();
